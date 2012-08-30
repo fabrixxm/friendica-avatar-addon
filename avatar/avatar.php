@@ -37,7 +37,7 @@ function avatar_init(&$a){
                     ORDER BY size
                     LIMIT 1
                     ",
-                int($size),
+                intval($size),
                 dbesc($domain),
                 dbesc($mduser)
             );
