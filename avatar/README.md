@@ -1,22 +1,12 @@
-friendica-avatar-addon
-======================
+Avatar Server
+==========
 
 libravatar server plugin for friendica.
 
 
-Install
-------
-
-Copy 'avatar' folder to your friendica addon folder, 
-then go to admin/plugins page and enable "Avatar Server"
-
 To be usable from libravatar libraries, you should also read
 [DNS Setup](http://wiki.libravatar.org/running_your_own/) 
 section on libravatar 'Running your own' wiki page.
-
-
-Info
-----
 
 This plugin follow api from http://wiki.libravatar.org/api/
 
