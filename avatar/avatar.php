@@ -16,12 +16,11 @@ function avatar_uninstall(){
 function avatar_module(){}
 
 function avatar_init(&$a){
-    //d05d0b3532a5c80d7fc9cc24c1eba81e
-    //5373619b43153c88b9287e526274c2a8
+
     if ($a->argc == 2) {
         $domain = $a->get_hostname();
         $mduser = $a->argv[1];
-        $size = ( isset($_GET['s'])?$_GET['s']:48 );
+        $size = ( isset($_GET['s'])?$_GET['s']:80 );
         $default = ( isset($_GET['d'])?$_GET['d']:$a->get_baseurl().'/images/person-175.jpg' );
       
         // search a photo near $size for user corresponding to hash
@@ -38,9 +37,10 @@ function avatar_init(&$a){
                     ORDER BY size
                     LIMIT 1
                     ",
-                $size,
-                $domain,
-                $mduser);
+                int($size),
+                dbesc($domain),
+                dbesc($mduser)
+            );
         if (count($r)>0){
             header("Content-type: ". $r[0]['type']);
             header("Expires: " . gmdate("D, d M Y H:i:s", time() + (3600*24)) . " GMT");
