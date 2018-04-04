@@ -1,6 +1,8 @@
 friendica-avatar-addon
 ======================
 
+# ⚠️ DOESN'T WORK ! DON'T USE ⚠️
+
 libravatar server plugin for friendica.
 
 
